@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Project Soft Copies</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5+z0GwFHHtD2z2zXn3m9smk3feWab5PQ1u5f0J/XH0BKk71SA/ZUq0w8Rg5ckg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <style>
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f8f9fa;
@@ -86,6 +89,84 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        .footercustom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            text-align: center;
+            position: relative;
+            padding: 40px 0; /* Added padding at the end of the footer */
+            background-color: #343a40; /* Adjusted to match the provided design */
+            color: #fff;
+        }
+
+        .social-icon {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .social-icon__item {
+            margin-right: 10px;
+            animation: fadein 1s;
+        }
+
+        .social-icon__link {
+            display: block;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            transition: all 0.3s ease;
+            background-color: #007bff; /* Adjusted to match the provided design */
+        }
+
+        .social-icon__link:hover {
+            transform: translate(-3px);
+        }
+
+        .social-icon__link i {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .menufooter {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        .menu__item {
+            margin-right: 20px;
+            animation: fadein 1.5s;
+        }
+
+        .menu__link {
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -221,11 +302,64 @@
             <img src="https://lh3.googleusercontent.com/pw/ADCreHe12Pl9lmAAttR29y0_xSbqKAZjfPhAtjKa_hDS8-dTDdtc1nlCEZxaAWnyAOHKANSPKqqcZbZZSVusl8TZdP1FTEdz03_BiLSKrTrGCp3EC676WtxzOxuyNo85pWlI9-h8Q9RHA8JVnWOuLz69CxuK=w462-h620-s-no-gm?authuser=0" alt="QR Code" class="qr-code">
         </div>
     </section>
-
+    
+    <footer class="footercustom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 text-center">
+                    <h4>About Us</h4>
+                    <b>
+                        <p>We are a community of B.Com students from BESC, Kolkata sharing notes and study materials to
+                            help each other.</p>
+                    </b>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center">
+                    <h4>Connect With Us</h4>
+                    <ul class="social-icon">
+                        <li class="social-icon__item"><a class="social-icon__link"
+                                href="https://www.facebook.com/cusemnotes?mibextid=ZbWKwL"><i
+                                    class="fab fa-facebook"></i></a></li>
+                        <li class="social-icon__item"><a class="social-icon__link"
+                                href="https://t.me/+__hX-kXcjsRmZDk1 "><i class="fab fa-telegram"></i></a></li>
+                        <li class="social-icon__item"><a class="social-icon__link"
+                                href="https://instagram.com/besc_bcomcommunity?igshid=ZDdkNTZiNTM="><i
+                                    class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center">
+                    <h4>Useful Links</h4>
+                    <ul class="menufooter">
+                        <li class="menu__item"><a class="menu__link"
+                                href="https://cusemnotes.blogspot.com/">Home</a></li>
+                        <li class="menu__item"><a class="menu__link"
+                                href="https://cusemnotes.blogspot.com/p/about-us.html">About</a></li>
+                        <li class="menu__item"><a class="menu__link"
+                                href="https://cusemnotes.blogspot.com/p/privacy-policy.html">Privacy</a></li>
+                        <li class="menu__item"><a class="menu__link"
+                                href="https://cusemnotes.blogspot.com/p/terms-and-conditions.html">T&amp;C</a></li>
+                        <li class="menu__item"><a class="menu__link"
+                                href="https://cusemnotes.blogspot.com/p/contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <b>
+                        <p>&copy;2023 CU BCom Community | All Rights Reserved </p>
+                        <p>"All uploaded files on this site are the sole property of their respective owners. We do
+                            not claim any rights or ownership over them."</p>
+                        <p>Designed With Love ❤ By Rajan Jha</p>
+                    </b>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <footer>
         Thank you for your understanding and support. Together, we can make academic resources more accessible for
         everyone.
     </footer>
+
 </body>
 
 </html>
