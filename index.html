@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5+z0GwFHHtD2z2zXn3m9smk3feWab5PQ1u5f0J/XH0BKk71SA/ZUq0w8Rg5ckg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
    <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -168,6 +167,90 @@
                 opacity: 1;
             }
         }
+        /* Customized CSS styles for the popup banner */
+        .popup-banner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            background-color: rgb(9, 219, 167); /* Adjusted to match the provided design */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: #fff; /* Adjusted text color to white */
+            display: none;
+            animation: slide-up 0.5s ease-out;
+            z-index: 9999;
+        }
+
+        .popup-banner.show {
+            display: block;
+            animation: slide-down 0.5s ease-out;
+        }
+
+        .popup-banner .message {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #0f0f0f; /* Adjusted text color to white */
+            text-align: center;
+        }
+
+        .popup-banner .button {
+            background-color: #7cd751;
+            padding: 16px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px;
+            color: #000; /* Adjusted text color to black */
+        }
+
+        .popup-banner .button:hover {
+            background-color: #2980b9;
+        }
+
+        /* CSS animations */
+        @keyframes slide-up {
+            from {
+                transform: translate(-50%, 100%);
+            }
+
+            to {
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @keyframes slide-down {
+            from {
+                transform: translate(-50%, -50%);
+            }
+
+            to {
+                transform: translate(-50%, 100%);
+            }
+        }
+
+        /* CSS styles for the close button */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #fff;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .close-button:focus {
+            outline: none;
+        }
+
+        .close-button:hover {
+            color: #ff0000;
+        }
+        
     </style>
 </head>
 
@@ -312,8 +395,33 @@
             <!-- Add the actual QR code image -->
             <img src="https://lh3.googleusercontent.com/pw/ADCreHe12Pl9lmAAttR29y0_xSbqKAZjfPhAtjKa_hDS8-dTDdtc1nlCEZxaAWnyAOHKANSPKqqcZbZZSVusl8TZdP1FTEdz03_BiLSKrTrGCp3EC676WtxzOxuyNo85pWlI9-h8Q9RHA8JVnWOuLz69CxuK=w462-h620-s-no-gm?authuser=0" alt="QR Code" class="qr-code">
         </div>
-        <script async="async" data-cfasync="false" src="//pl19066917.toprevenuegate.com/a570ed439ac9584fc7ed198929b1b431/invoke.js"></script>
+        
+        <div class='popup-banner show' id='popupBanner'>
+            <button class='close-button' id='closeButton'>&#10005;</button>
+                <p class='message' ><strong>Welcome 🙏!!</strong></p>
+                <p style='color: #8B008B'>Join our WhatsApp Channel and follow us on Instagram.</p>
+                <a class='button' href='https://whatsapp.com/channel/0029Va4xC4t6buMQhPRlZd08'
+                    target='_blank'>Join Whatsapp Channel</a>
+                <a class='button' href='https://www.instagram.com/besc_bcomcommunity' target='_blank'>Follow on
+                    Instagram</a>
+        </div>
+    
+        <script>
+            // JavaScript code to show the popup banner
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var popupBanner = document.getElementById("popupBanner");
+                popupBanner.classList.add("show");
+    
+                // Close the banner when "Close" button is clicked
+                var closeButton = document.getElementById("closeButton");
+                closeButton.addEventListener("click", function () {
+                    popupBanner.classList.remove("show");
+                });
+            });
+        </script>
 
+        <script async="async" data-cfasync="false" src="//pl19066917.toprevenuegate.com/a570ed439ac9584fc7ed198929b1b431/invoke.js"></script>
+        
     </section>
     
     <footer class="footercustom">
